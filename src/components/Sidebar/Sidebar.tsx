@@ -20,8 +20,8 @@ function Sidebar() {
           <span className="contact-icon" aria-hidden="true">📧</span>
           <div className="contact-info">
             <p className="contact-label">Email</p>
-            <a href="mailto:rhonjo@gmail.com" className="contact-value">
-              rhonjo@gmail.com
+            <a href="mailto:rhonjo(at)gmail.com" className="contact-value">
+              rhonjo(at)gmail.com
             </a>
           </div>
         </li>
