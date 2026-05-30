@@ -3,19 +3,18 @@ import Sidebar from './components/Sidebar/Sidebar';
 import About from './components/About/About';
 import Resume from './components/Resume/Resume';
 import Portfolio from './components/Portfolio/Portfolio';
-import './styles/global.css';
 
-const TABS = ['About', 'Resume', 'Portfolio'];
+const TABS = ['About', 'Resume', 'Portfolio'] as const;
+type Tab = typeof TABS[number];
 
 function App() {
-  const [activeTab, setActiveTab] = useState('About');
+  const [activeTab, setActiveTab] = useState<Tab>('About');
 
-  const renderContent = () => {
+  const renderContent = (): React.ReactElement => {
     switch (activeTab) {
       case 'About':     return <About />;
       case 'Resume':    return <Resume />;
       case 'Portfolio': return <Portfolio />;
-      default:          return <About />;
     }
   };
 

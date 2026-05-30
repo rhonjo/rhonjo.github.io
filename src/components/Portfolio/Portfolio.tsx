@@ -1,76 +1,24 @@
 import React, { useState } from 'react';
 
-// const projects = [
-//   {
-//     id: 1,
-//     title: 'E-Commerce Platform',
-//     category: 'Web App',
-//     emoji: '🛒',
-//     link: '#',
-//   },
-//   {
-//     id: 2,
-//     title: 'Finance Dashboard',
-//     category: 'Web App',
-//     emoji: '📊',
-//     link: '#',
-//   },
-//   {
-//     id: 3,
-//     title: 'Travel Mobile App',
-//     category: 'Mobile',
-//     emoji: '✈️',
-//     link: '#',
-//   },
-//   {
-//     id: 4,
-//     title: 'Brand Identity System',
-//     category: 'Design',
-//     emoji: '🎨',
-//     link: '#',
-//   },
-//   {
-//     id: 5,
-//     title: 'SaaS Analytics Tool',
-//     category: 'Web App',
-//     emoji: '📈',
-//     link: '#',
-//   },
-//   {
-//     id: 6,
-//     title: 'Fitness Tracker App',
-//     category: 'Mobile',
-//     emoji: '🏋️',
-//     link: '#',
-//   },
-//   {
-//     id: 7,
-//     title: 'Restaurant Website',
-//     category: 'Design',
-//     emoji: '🍽️',
-//     link: '#',
-//   },
-//   {
-//     id: 8,
-//     title: 'Real-Time Chat App',
-//     category: 'Web App',
-//     emoji: '💬',
-//     link: '#',
-//   },
-// ];
+interface Project {
+  id: number;
+  title: string;
+  category: string;
+  emoji: string;
+  link: string;
+}
 
-const projects = [
+const projects: Project[] = [
   {
     id: 1,
     title: 'Exercise App',
     category: 'Web App',
     emoji: '🏋️',
     link: 'https://rhonjo.github.io/workoutCards/',
-  }
-
+  },
 ];
 
-const categories = ['All', 'Web App'];
+const categories = ['All', 'Web App'] as const;
 
 function Portfolio() {
   const [activeFilter, setActiveFilter] = useState('All');

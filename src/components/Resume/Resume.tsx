@@ -1,6 +1,18 @@
 import React from 'react';
 
-const experience = [
+interface ExperienceItem {
+  date: string;
+  title: string;
+  company: string;
+  desc: string[];
+}
+
+interface SkillItem {
+  name: string;
+  percent: number;
+}
+
+const experience: ExperienceItem[] = [
   {
     date: '06/2017 — Present',
     title: 'Full Stack Web Developer',
@@ -40,20 +52,20 @@ const experience = [
   },
 ];
 
-const skills = [
+const skills: SkillItem[] = [
   { name: 'JavaScript / React', percent: 92 },
   { name: 'Java / Hibernate', percent: 85 },
   { name: 'Data Visualization (Three.js / Amchart.js / Canvas)', percent: 88 },
   { name: 'MySQL / MongoDB', percent: 87 },
   { name: 'AWS / Cloud Infrastructure', percent: 80 },
-  { name: 'Accessibility (WCAG / ARIA)', percent: 83 }
+  { name: 'Accessibility (WCAG / ARIA)', percent: 83 },
 ];
 
 function Resume() {
   return (
     <article>
       <section className="section-card">
-    
+
         {/* Experience */}
         <div className="resume-section">
           <h2 className="resume-section-title">

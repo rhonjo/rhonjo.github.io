@@ -1,6 +1,12 @@
 import React from 'react';
 
-const services = [
+interface Service {
+  icon: string;
+  title: string;
+  desc: string;
+}
+
+const services: Service[] = [
   {
     icon: '💻',
     title: 'Web Design',
@@ -18,7 +24,6 @@ const services = [
   },
 ];
 
-
 function About() {
   return (
     <article>
@@ -31,7 +36,6 @@ applications. Expert in Javascript, Java/Hibernate, AWS cloud infrastructure, an
 Specialized in WCAG 2.2 accessibility remediation and leading cross-functional teams through the full web development
 life cycle.
         </p>
-
       </section>
 
       {/* Services */}
@@ -47,8 +51,6 @@ life cycle.
           ))}
         </ul>
       </section>
-
-  
     </article>
   );
 }
